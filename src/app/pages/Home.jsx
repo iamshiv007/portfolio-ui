@@ -49,12 +49,12 @@ const Home = () => {
           </div>
 
           <div
-            className='bg-[url(/images/profile.png)] w-[300px] h-[300px] bg-cover rounded-full bg-gray-200 dark:bg-gray-500 hover:cursor-pointer hover:bg-blend-multiply m-auto md:m-0 mt-[40px] md:mt-0'
+            className='bg-[url(/images/profile.png)] w-[300px] h-[300px] bg-cover rounded-full bg-gray-400 dark:bg-gray-500 hover:cursor-pointer hover:bg-blend-multiply m-auto md:m-0 mt-[40px] md:mt-0'
             ref={profileRef}
           >
             {showResume ? (
               <Link
-                className='w-full h-full flex justify-center items-center underline text-xl text-white dark:text-black font-bold'
+                className='w-full h-full flex justify-center items-center underline text-xl text-white font-bold'
                 href='https://drive.google.com/file/d/1AWiU8oWJi5rY0nl6d3iMHOjevBq7izOU/view?usp=drive_link'
                 passHref
                 target='_blank'
