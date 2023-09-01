@@ -15,11 +15,11 @@ const Home = () => {
 
         <div>
           <Image
+            alt='profile'
             className='rounded-full'
-            width={300}
             height={300}
             src='/images/profile.png'
-            alt=''
+            width={300}
           />
         </div>
       </div>
