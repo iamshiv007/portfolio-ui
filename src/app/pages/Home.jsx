@@ -3,8 +3,6 @@ import Link from "next/link";
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import { FiExternalLink } from "react-icons/fi";
 
-import Theme from "../components/others/Theme";
-
 const Home = () => {
   const profileRef = useRef();
   const [showResume, setShowResume] = useState(false);
@@ -32,8 +30,8 @@ const Home = () => {
 
   return (
     <Fragment>
-      <Theme>
-        <div className='min-h-[100vh] px-[20px] md:px-[100px] lg:px-[200px] pt-[80px] md:pt-0 md:flex items-center justify-between'>
+      <section id='home'>
+        <div className='min-h-[100vh] px-[20px] md:px-[100px] lg:px-[200px] pt-[80px] md:pt-0 md:flex items-center justify-between shadow-zinc-300 dark:shadow-zinc-700 shadow-xl'>
           <div>
             <p className='text-4xl sm:text-5xl py-2 font-semibold'>Hi,</p>
             <p className='text-4xl sm:text-5xl py-2 font-semibold'>
@@ -64,7 +62,7 @@ const Home = () => {
             ) : null}
           </div>
         </div>
-      </Theme>
+      </section>
     </Fragment>
   );
 };
