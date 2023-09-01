@@ -9,7 +9,7 @@ const SocialMedia = () => {
       <div className='absolute left-10 bottom-3'>
         {SocialMediaData.map((social) => (
           <div
-            className={"text-xl rounded-full w-fit p-2 mb-3"}
+            className={"text-xl text-white rounded-full w-fit p-2 mb-3"}
             key={social.name}
             style={{ background: social.color }}
           >

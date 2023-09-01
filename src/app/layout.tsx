@@ -4,6 +4,8 @@ import { Instrument_Sans } from "next/font/google";
 
 const inter = Instrument_Sans({ subsets: ["latin"] });
 
+import { ThemeContextProvider } from "./context/ThemeContext";
+
 export const metadata: Metadata = {
   title: "Portfolio UI",
   description: "This is ui part of my next project.",
@@ -16,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeContextProvider>{children}</ThemeContextProvider>
+      </body>
     </html>
   );
 }
