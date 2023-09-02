@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, useContext, useEffect } from "react";
 import Link from "next/link";
 import { DiTechcrunch } from "react-icons/di";
 import { BsFillLightningChargeFill } from "react-icons/bs";
@@ -11,9 +11,26 @@ import { NavbarData } from "../../portfolioData/NavbarData";
 const Navbar = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
+  useEffect(() => {
+    let prevScrollPos = window.scrollY;
+    const navbar = document.querySelector(".navbar");
+
+    window.onscroll = function () {
+      const currentScrollPos = window.scrollY;
+
+      if (prevScrollPos > currentScrollPos) {
+        navbar.style.top = "0";
+      } else {
+        navbar.style.top = "-50px"; // Hides the navbar
+      }
+
+      prevScrollPos = currentScrollPos;
+    };
+  }, []);
+
   return (
     <Fragment>
-      <div className='fixed top-0 hidden md:flex gap-4 justify-between w-full p-3 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 px-8 bg-[#ffffffcc] dark:bg-[#000000cc] backdrop-filter backdrop-blur-lg'>
+      <div className='navbar transition-all fixed top-0 hidden md:flex gap-4 justify-between w-full p-3 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 px-8 bg-[#ffffffcc] dark:bg-[#000000cc] backdrop-filter backdrop-blur-lg'>
         <p className='flex text-gray-400'>
           <span className='font-bold text-lg'>SHIV</span> <DiTechcrunch />
         </p>
