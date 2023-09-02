@@ -8,8 +8,8 @@ export const NavbarData = [
     url: "#about",
   },
   {
-    name: "Skills",
-    url: "#skills",
+    name: "Tech Stack",
+    url: "#techStack",
   },
   {
     name: "Education",

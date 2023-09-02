@@ -7,6 +7,7 @@ const MobileNavbar = dynamic(() => import("./components/layout/MobileNavbar"));
 const MyHome = dynamic(() => import("./pages/Home"));
 const SocialMedia = dynamic(() => import("./components/others/SocialMedia"));
 const About = dynamic(() => import("./pages/About"));
+const TechStack = dynamic(() => import("./pages/TechStack"));
 
 export default function Home() {
   return (
@@ -23,6 +24,8 @@ export default function Home() {
           <SocialMedia />
           {/* About me */}
           <About />
+          {/* Tech Stacks */}
+          <TechStack />
         </div>
       </Theme>
     </Fragment>
