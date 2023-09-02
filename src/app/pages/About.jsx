@@ -5,15 +5,18 @@ import { FaUserCheck } from "react-icons/fa";
 const About = () => {
   return (
     <Fragment>
-      <section id='about'>
+      <section
+        className='shadow-zinc-300 dark:shadow-zinc-700 shadow-sm'
+        id='about'
+      >
         <h2 className='text-3xl font-bold text-center p-4 flex justify-center gap-3'>
           <FaUserCheck /> About me
         </h2>
-        <div className='py-[30px] px-[20px] md:px-[100px] lg:px-[200px] md:flex gap-[50px] shadow-zinc-300 dark:shadow-zinc-700 shadow-xl'>
+        <div className='py-[30px] px-[20px] md:px-[100px] lg:px-[200px] md:flex gap-[50px]'>
           <div>
             <Image
               alt='photo'
-              className='rounded shadow-lg shadow-gray-400 dark:shadow-gray-700 bg-gray-400 m-auto'
+              className='rounded shadow-sm shadow-gray-400 dark:shadow-gray-700 bg-gray-400 m-auto'
               height={460}
               src='/images/profile2.jpg'
               width={260}
@@ -47,7 +50,7 @@ const About = () => {
               </span>
             </p>
 
-            <div className='text-base mt-3 justify-evenly text-justify'>
+            <div className='mt-3 justify-evenly text-justify'>
               <p className='text-[#159e6e] dark:text-[#17c1ff] font-semibold text-center md:text-left my-1'>
                 Objective
               </p>

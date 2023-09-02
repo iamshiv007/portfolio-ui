@@ -31,7 +31,7 @@ const Home = () => {
   return (
     <Fragment>
       <section id='home'>
-        <div className='min-h-[100vh] px-[20px] md:px-[100px] lg:px-[200px] pt-[80px] md:pt-0 md:flex items-center justify-between shadow-zinc-300 dark:shadow-zinc-700 shadow-xl'>
+        <div className='min-h-[100vh] px-[20px] md:px-[100px] lg:px-[200px] pt-[80px] md:pt-0 md:flex items-center justify-between shadow-zinc-300 dark:shadow-zinc-700 shadow-sm'>
           <div>
             <p className='text-4xl sm:text-5xl py-2 font-semibold'>Hi,</p>
             <p className='text-4xl sm:text-5xl py-2 font-semibold'>

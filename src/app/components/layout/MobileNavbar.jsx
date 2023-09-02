@@ -18,7 +18,7 @@ const MobileNavbar = () => {
   return (
     <Fragment>
       {/* Header */}
-      <div className='md:hidden flex justify-between fixed top-0 w-full py-3 px-5 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 bg-[#ffffff98] dark:bg-[#00000098] backdrop-filter backdrop-blur-lg'>
+      <div className='md:hidden flex justify-between fixed top-0 w-full py-3 px-5 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 bg-[#ffffffcc] dark:bg-[#000000cc] backdrop-filter backdrop-blur-lg'>
         <div className='flex gap-4 items-center'>
           <button
             className='text-3xl font-semibold'

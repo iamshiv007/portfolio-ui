@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <Fragment>
-      <div className='fixed top-0 hidden md:flex gap-4 justify-between w-full p-3 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 px-8 bg-[#ffffff98] dark:bg-[#00000098] backdrop-filter backdrop-blur-lg'>
+      <div className='fixed top-0 hidden md:flex gap-4 justify-between w-full p-3 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 px-8 bg-[#ffffffcc] dark:bg-[#000000cc] backdrop-filter backdrop-blur-lg'>
         <p className='flex text-gray-400'>
           <span className='font-bold text-lg'>SHIV</span> <DiTechcrunch />
         </p>
