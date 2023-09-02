@@ -8,10 +8,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import { ThemeContext } from "../../context/ThemeContext";
 import { NavbarData } from "../../portfolioData/NavbarData";
+import MobileNavbar from "./MobileNavbar";
 
 const Navbar = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
   const [top, setTop] = useState("0");
+  const [showMenu, setShowMenu] = useState(false);
+
+  const { theme, setTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     let prevScrollPos = window.scrollY;
@@ -90,6 +93,8 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+
+      <MobileNavbar setShowMenu={setShowMenu} showMenu={showMenu} />
     </Fragment>
   );
 };

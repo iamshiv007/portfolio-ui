@@ -6,9 +6,7 @@ import { IoMdClose } from "react-icons/io";
 
 import { NavbarData } from "../../portfolioData/NavbarData";
 
-const MobileNavbar = () => {
-  const [showMenu, setShowMenu] = useState(false);
-
+const MobileNavbar = ({ showMenu, setShowMenu }) => {
   return (
     <Fragment>
       {/* Sidebar */}
