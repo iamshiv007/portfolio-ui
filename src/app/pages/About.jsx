@@ -13,14 +13,14 @@ const About = () => {
           <div>
             <Image
               alt='photo'
-              className='rounded shadow-lg shadow-gray-400 dark:shadow-gray-700 bg-gray-400'
-              height={100}
+              className='rounded shadow-lg shadow-gray-400 dark:shadow-gray-700 bg-gray-400 m-auto'
+              height={460}
               src='/images/profile2.jpg'
               width={260}
             />
           </div>
 
-          <div className='text-lg mt-4 md:mt-0 md:w-[50%]'>
+          <div className='text-lg mt-4 md:mt-0 md:w-[50%] text-center md:text-left'>
             <p>
               My name is{" "}
               <span className='text-[#159e6e] dark:text-[#17c1ff] font-semibold'>
@@ -47,14 +47,20 @@ const About = () => {
               </span>
             </p>
 
-            <p className='text-base mt-2 justify-evenly text-justify'>
-              I didn&apos;t complete my college for some reason, but I&apos;ve
-              learned coding and programming by myself through YouTube and other
-              internet resources. I&apos;m definitely aiming to achieve
-              something big in my life. I am a consistent learner and a strong
-              believer. I&apos;ve worked on numerous React, Next, and MERN stack
-              projects.
-            </p>
+            <div className='text-base mt-3 justify-evenly text-justify'>
+              <p className='text-[#159e6e] dark:text-[#17c1ff] font-semibold text-center md:text-left my-1'>
+                Objective
+              </p>
+
+              <p>
+                I didn&apos;t complete my college for some reason, but I&apos;ve
+                learned coding and programming by myself through YouTube and
+                other internet resources. I&apos;m definitely aiming to achieve
+                something big in my life. I am a consistent learner and a strong
+                believer. I&apos;ve worked on numerous React, Next, and MERN
+                stack projects.
+              </p>
+            </div>
           </div>
         </div>
       </section>
