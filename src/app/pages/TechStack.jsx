@@ -3,6 +3,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import { FaLaptopCode } from "react-icons/fa";
 
 import { TechStackData } from "../portfolioData/TechStackData";
+import Loader from "../components/layout/loader/Loader";
 
 const TechStack = () => {
   const [section, setSection] = useState("Advance");
@@ -52,16 +53,20 @@ const TechStack = () => {
           </button>
         </div>
 
-        <div className='flex min-h-[450px] py-[30px] px-[20px] md:px-[100px] flex-wrap justify-center gap-5'>
-          {sectionData.map((tech) => (
-            <div
-              className='px-2 h-fit py-3 md:py-5 w-[120px] md:w-[150px] border border-black dark:border-white border-solid rounded flex flex-col gap-3 items-center'
-              key={tech.name}
-            >
-              <p>{tech.icon}</p>
-              <p>{tech.name}</p>
-            </div>
-          ))}
+        <div className='flex min-h-[450px] py-[30px] px-[20px] md:px-[100px] flex-wrap justify-center items-center gap-5'>
+          {sectionData.length !== 0 ? (
+            sectionData.map((tech) => (
+              <div
+                className='px-2 h-fit py-3 md:py-5 w-[120px] md:w-[150px] border border-black dark:border-white border-solid rounded flex flex-col gap-3 items-center'
+                key={tech.name}
+              >
+                <p>{tech.icon}</p>
+                <p>{tech.name}</p>
+              </div>
+            ))
+          ) : (
+            <Loader height={"450px"} />
+          )}
         </div>
       </section>
     </Fragment>
