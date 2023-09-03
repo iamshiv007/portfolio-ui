@@ -6,8 +6,8 @@ import { BsFillLightningChargeFill } from "react-icons/bs";
 import { TbBulbFilled } from "react-icons/tb";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-import { ThemeContext } from "../../context/ThemeContext";
-import { NavbarData } from "../../portfolioData/NavbarData";
+import { ThemeContext } from "../../../context/ThemeContext";
+import { NavbarData } from "../../../portfolioData/NavbarData";
 import MobileNavbar from "./MobileNavbar";
 
 const Navbar = () => {

@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import dynamic from "next/dynamic";
 
 import Theme from "./components/others/Theme";
-const Navbar = dynamic(() => import("./components/layout/Navbar"));
+const Navbar = dynamic(() => import("./components/layout/navbar/Navbar"));
 const MyHome = dynamic(() => import("./pages/Home"));
 const SocialMedia = dynamic(() => import("./components/others/SocialMedia"));
 const About = dynamic(() => import("./pages/About"));
