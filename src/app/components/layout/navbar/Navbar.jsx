@@ -25,7 +25,7 @@ const Navbar = () => {
       if (prevScrollPos > currentScrollPos) {
         setTop("0");
       } else {
-        setTop("-50px"); // Hides the navbar
+        setTop("-60px"); // Hides the navbar
       }
 
       prevScrollPos = currentScrollPos;
@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <Fragment>
       <div
-        className='navbar transition-all fixed hidden md:flex gap-4 justify-between w-full p-3 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 px-8 bg-[#ffffffcc] dark:bg-[#000000cc] backdrop-filter backdrop-blur-lg'
+        className='navbar transition-all duration-500 fixed hidden md:flex gap-4 justify-between w-full p-3 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 px-8 bg-[#ffffffcc] dark:bg-[#000000cc] backdrop-filter backdrop-blur-lg'
         style={{ top: top }}
       >
         <p className='flex text-gray-400'>
@@ -64,7 +64,7 @@ const Navbar = () => {
 
       {/* mobile Header */}
       <div
-        className='md:hidden navbar transition-all flex justify-between fixed w-full py-3 px-5 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 bg-[#ffffffcc] dark:bg-[#000000cc] backdrop-filter backdrop-blur-lg'
+        className='md:hidden navbar transition-all duration-500 flex justify-between fixed w-full py-3 px-5 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 bg-[#ffffffcc] dark:bg-[#000000cc] backdrop-filter backdrop-blur-lg'
         style={{ top }}
       >
         <div className='flex gap-4 items-center'>
