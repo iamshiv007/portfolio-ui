@@ -82,7 +82,7 @@
   }
 }
 
-/* Home animation */
+/* Home animation and About animation */
 .slide-in {
   transform: translateX(0);
   opacity: 1;
