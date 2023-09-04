@@ -2,6 +2,8 @@
 import React, { Fragment, useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { FaUserCheck } from "react-icons/fa";
+import { IoLocationSharp } from "react-icons/io5";
+import { BsFillEmojiSmileFill } from "react-icons/bs";
 
 const About = () => {
   const [isAbout, setIsAbout] = useState(false);
@@ -62,38 +64,23 @@ const About = () => {
             className='text-lg translate-x-[900px] opacity-0 transition-all duration-700 mt-4 md:mt-0 md:w-[50%] text-center md:text-left'
             ref={aboutInfoRef}
           >
-            <p>
-              My name is{" "}
-              <span className='text-[#159e6e] dark:text-[#17c1ff] font-semibold'>
-                Shivraj Gurjar.
-              </span>
+            <p className='text-3xl text-center md:text-left text-blue-700'>
+              Shivraj Gurjar.
             </p>
-            <p>
-              I&apos;m from{" "}
-              <span className='text-[#159e6e] dark:text-[#17c1ff] font-semibold'>
-                Kota, Rajasthan, India.
-              </span>
+            <p className='text-center md:text-left text-blue-600 mt-1'>
+              Full Stack Developer
             </p>
-            <p>
-              I&apos;m{" "}
-              <span className='text-[#159e6e] dark:text-[#17c1ff] font-semibold'>
-                20 Years
-              </span>{" "}
-              old.
+            <p className='mt-2 text-center md:text-left text-gray-700 dark:text-gray-500'>
+              Location : Kota, Rajasthan, India 🇮🇳
             </p>
-            <p>
-              I&apos;m a passionate{" "}
-              <span className='text-[#159e6e] dark:text-[#17c1ff] font-semibold'>
-                React Developer.
-              </span>
+            <p className='text-center md:text-left text-gray-700 dark:text-gray-500'>
+              Age : 20 Years
             </p>
 
-            <div className='mt-3 justify-evenly text-justify'>
-              <p className='text-[#159e6e] dark:text-[#17c1ff] font-semibold text-center md:text-left my-1'>
-                Objective
-              </p>
+            <div className='mt-5 justify-evenly text-justify'>
+              <p className='text-center md:text-left my-1 text-sm'>Objective</p>
 
-              <p>
+              <p className='text-sm'>
                 I didn&apos;t complete my college for some reason, but I&apos;ve
                 learned coding and programming by myself through YouTube and
                 other internet resources. I&apos;m definitely aiming to achieve
