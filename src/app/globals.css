@@ -28,6 +28,7 @@
   -webkit-scroll-behavior: smooth !important; /* other browsers */
 }
 
+/* Loader - Spinner */
 .dot1,
 .dot2,
 .dot3 {
@@ -79,4 +80,10 @@
     top: -20px;
     left: -20px;
   }
+}
+
+/* Home animation */
+.slide-in {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
 }
