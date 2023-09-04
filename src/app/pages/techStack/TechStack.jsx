@@ -53,7 +53,7 @@ const TechStack = () => {
   return (
     <Fragment>
       <section
-        className='shadow-zinc-300 dark:shadow-zinc-700 shadow-sm'
+        className='shadow-zinc-300 dark:shadow-zinc-700 shadow-sm overflow-hidden'
         id='techStack'
         ref={techStackRef}
       >
