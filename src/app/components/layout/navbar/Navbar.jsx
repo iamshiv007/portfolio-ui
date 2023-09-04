@@ -25,7 +25,7 @@ const Navbar = () => {
       if (prevScrollPos > currentScrollPos) {
         setTop("0");
       } else {
-        setTop("-60px"); // Hides the navbar
+        setTop("-80px"); // Hides the navbar
       }
 
       prevScrollPos = currentScrollPos;
@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <Fragment>
       <div
-        className='navbar transition-all duration-500 fixed hidden md:flex gap-4 justify-between w-full p-3 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 px-8 bg-[#ffffffcc] dark:bg-[#000000cc] backdrop-filter backdrop-blur-lg'
+        className='navbar transition-all duration-500 fixed hidden md:flex gap-4 justify-between w-full p-5 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 px-8 bg-[#ffffffcc] dark:bg-[#000000cc] backdrop-filter backdrop-blur-lg'
         style={{ top: top }}
       >
         <p className='flex text-gray-400'>
@@ -45,7 +45,7 @@ const Navbar = () => {
           {NavbarData.map((navbar) => (
             <Link
               className={
-                "font-semibold p-1 text-[#159e6e] dark:text-[#17c1ff] border-b border-white dark:border-black hover:border-[#159e6e] dark:hover:border-[#17c1ff] border-solid"
+                "font-semibold p-1 text-[#159e6e] dark:text-[#17c1ff] hover:border-b  border-[#159e6e] dark:border-[#17c1ff] border-solid"
               }
               href={navbar.url}
               key={navbar.name}
