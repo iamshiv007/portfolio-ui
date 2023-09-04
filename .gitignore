@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# blackbox Readme
+BLACKBOX_README.md
+
 # next.js
 /.next/
 /out/
