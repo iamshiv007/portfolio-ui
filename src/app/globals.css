@@ -82,7 +82,7 @@
   }
 }
 
-/* Home animation and About animation */
+/* Home animation and About animation and TeckStack buttons animation */
 .slide-in {
   transform: translateX(0);
   opacity: 1;
@@ -95,4 +95,15 @@
 
 .social-show > div {
   transform: scale(0.9);
+}
+
+/* TechStack animation */
+.techBoxesRotate > div {
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.techBoxes > div {
+  transform: rotate(0);
+  opacity: 1;
 }

@@ -42,7 +42,6 @@ const Home = () => {
     const homeObserver = new IntersectionObserver(
       ([homeEntry]) => {
         setIsHome(homeEntry.isIntersecting);
-        console.log(homeEntry.isIntersecting);
       },
       {
         rootMargin: `${getScreenWidth() <= 700 ? "-100px" : "-300px"}`,
