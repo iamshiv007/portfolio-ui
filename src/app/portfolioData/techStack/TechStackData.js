@@ -10,7 +10,8 @@ import {
     SiMui,
     SiChakraui,
     SiFirebase,
-    SiTypescript
+    SiTypescript,
+    SiJquery
 } from "react-icons/si";
 import { DiJavascript1, DiReact, DiMongodb, DiSass } from "react-icons/di";
 import { BsGit, BsGithub } from "react-icons/bs";
@@ -86,6 +87,10 @@ export const TechStackData = [
             {
                 name: "firebase",
                 icon: <SiFirebase className="md:text-4xl text-2xl" color="#ffcd33" />
+            },
+            {
+                name: "jQuery",
+                icon: <SiJquery className="md:text-4xl text-2xsl" color="#106dae" />
             },
             {
                 name: "netlify",
