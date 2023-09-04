@@ -99,11 +99,13 @@
 
 /* TechStack animation */
 .techBoxesRotate > div {
-  transform: rotate(45deg);
+  transform: rotate(360deg);
   opacity: 0;
+  scale: 0;
 }
 
 .techBoxes > div {
   transform: rotate(0);
   opacity: 1;
+  scale: 1;
 }
