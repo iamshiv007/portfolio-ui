@@ -17,8 +17,8 @@ const MobileNavbar = ({ showMenu, setShowMenu }) => {
         onClick={() => setShowMenu(!showMenu)}
       >
         <div
-          className={`w-[70%] h-screen bg-white dark:bg-black shadow-sm shadow-gray-600 dark:shadow-gray-300  transition-all ${
-            showMenu ? null : "-translate-x-[100%]"
+          className={`w-[70%] h-screen bg-white dark:bg-black shadow-sm shadow-gray-600 dark:shadow-gray-300  transition-all duration-1000 ${
+            showMenu ? null : "translate-x-[-450px]"
           }`}
         >
           <div className='flex items-center p-3 gap-2 justify-between  bg-gray-200 dark:bg-gray-800'>
