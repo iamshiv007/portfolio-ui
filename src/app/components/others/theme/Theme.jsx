@@ -1,7 +1,7 @@
 "use client";
 import React, { Fragment, useContext } from "react";
 
-import { ThemeContext } from "../../context/ThemeContext";
+import { ThemeContext } from "../../../context/ThemeContext";
 
 const Theme = ({ children }) => {
   const { theme } = useContext(ThemeContext);

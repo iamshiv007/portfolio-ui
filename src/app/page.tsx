@@ -1,17 +1,17 @@
 import React, { Fragment } from "react";
 import dynamic from "next/dynamic";
 
-import Theme from "./components/others/Theme";
+import Theme from "./components/others/theme/Theme";
 import Loader from "./components/layout/loader/Loader";
 const Navbar = dynamic(() => import("./components/layout/navbar/Navbar"));
-const MyHome = dynamic(() => import("./pages/Home"), {
+const MyHome = dynamic(() => import("./pages/home/Home"), {
   loading: () => <Loader height={"100vh"} />,
 });
-const SocialMedia = dynamic(() => import("./components/others/SocialMedia"));
-const About = dynamic(() => import("./pages/About"), {
+const SocialMedia = dynamic(() => import("./components/others/socialMedia/SocialMedia"));
+const About = dynamic(() => import("./pages/about/About"), {
   loading: () => <Loader height={"100vh"} />,
 });
-const TechStack = dynamic(() => import("./pages/TechStack"), {
+const TechStack = dynamic(() => import("./pages/techStack/TechStack"), {
   loading: () => <Loader height={"550px"} />,
 });
 

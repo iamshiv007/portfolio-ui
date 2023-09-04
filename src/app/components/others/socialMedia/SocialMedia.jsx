@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 
-import { SocialMediaData } from "../../portfolioData/SocialMediaData";
+import { SocialMediaData } from "../../../portfolioData/socialMedia/SocialMediaData";
 
 const SocialMedia = () => {
   return (

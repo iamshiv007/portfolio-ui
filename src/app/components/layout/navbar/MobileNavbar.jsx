@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoMdClose } from "react-icons/io";
 
-import { NavbarData } from "../../../portfolioData/NavbarData";
+import { NavbarData } from "../../../portfolioData/navbar/NavbarData";
 
 const MobileNavbar = ({ showMenu, setShowMenu }) => {
   return (

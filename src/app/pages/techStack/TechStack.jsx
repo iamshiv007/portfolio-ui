@@ -2,8 +2,8 @@
 import React, { Fragment, useState, useEffect } from "react";
 import { FaLaptopCode } from "react-icons/fa";
 
-import { TechStackData } from "../portfolioData/TechStackData";
-import Loader from "../components/layout/loader/Loader";
+import { TechStackData } from "../../portfolioData/techStack/TechStackData";
+import Loader from "../../components/layout/loader/Loader";
 
 const TechStack = () => {
   const [section, setSection] = useState("Advance");
