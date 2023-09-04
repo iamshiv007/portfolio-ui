@@ -84,6 +84,15 @@
 
 /* Home animation */
 .slide-in {
-  transform: translateX(0) !important;
-  opacity: 1 !important;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* SocialMedia animation */
+.social-hide > div {
+  transform: scale(0);
+}
+
+.social-show > div {
+  transform: scale(0.9);
 }
