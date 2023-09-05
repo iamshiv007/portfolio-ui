@@ -56,7 +56,7 @@ const Education = () => {
             >
               <Image
                 alt={education.name}
-                className='hidden md:block'
+                className='hidden md:block bg-blue-600'
                 height={150}
                 src={education.image}
                 width={150}
