@@ -111,11 +111,13 @@
 }
 
 /* Education Animation */
-.hideEdcationBoxes > div {
+.hideEdcationBoxes > div,
+.hideExpeBoxes > div > div {
   opacity: 0;
   scale: 0;
 }
-.educationBoxes > div {
+.educationBoxes > div,
+.expeBoxes > div > div {
   opacity: 1;
   scale: 1;
 }

@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect, useRef } from "react";
 import { MdWork } from "react-icons/md";
 import { ImLocation } from "react-icons/im";
 import { BsArrowDownCircle } from "react-icons/bs";
@@ -8,15 +8,42 @@ import { ExperienceData } from "../../portfolioData/experience/ExperienceData";
 
 const Experience = () => {
   const [desc, setDesc] = useState("");
+  const [isExpe, setIsExpe] = useState(false);
+  const expeRef = useRef();
+  const expeBoxesRef = useRef();
+
+  useEffect(() => {
+    const getScreenWidth = () =>
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+
+    const expeObserver = new IntersectionObserver(
+      ([expeEntry]) => {
+        setIsExpe(expeEntry.isIntersecting);
+      },
+      {
+        rootMargin: `${getScreenWidth() <= 700 ? "-100px" : "-100px"}`,
+      }
+    );
+
+    expeObserver.observe(expeRef.current);
+
+    if (isExpe) {
+      expeBoxesRef.current.classList.add("expeBoxes");
+    } else {
+      expeBoxesRef.current.classList.remove("expeBoxes");
+    }
+  }, [isExpe]);
 
   return (
     <Fragment>
-      <section id='experience'>
+      <section id='experience' ref={expeRef}>
         <h2 className='text-3xl font-bold text-center p-4 flex justify-center gap-3'>
           <MdWork /> Experience
         </h2>
 
-        <div className='pb-[30px] px-[20px] '>
+        <div className='pb-[30px] px-[20px] hideExpeBoxes' ref={expeBoxesRef}>
           {ExperienceData.map((experience, index) =>
             experience.side === "left" ? (
               <div
@@ -26,7 +53,7 @@ const Experience = () => {
                 key={experience.company}
               >
                 <div
-                  className='md:w-[45%] cursor-pointer p-3 border border-zinc-300 dark:border-zinc-700 shadow-zinc-300 dark:shadow-zinc-700 shadow-sm rounded'
+                  className='md:w-[45%] transition-all duration-500 cursor-pointer p-3 border border-zinc-300 dark:border-zinc-700 shadow-zinc-300 dark:shadow-zinc-700 shadow-sm rounded'
                   onClick={() =>
                     setDesc(
                       desc === experience.description
@@ -80,15 +107,8 @@ const Experience = () => {
               </div>
             ) : (
               <div
-                className='cursor-pointer md:flex justify-end items-end mt-7 gap-2'
+                className='md:flex justify-end items-end mt-7 gap-2'
                 key={experience.companyName}
-                onClick={() =>
-                  setDesc(
-                    desc === experience.description
-                      ? ""
-                      : experience.description
-                  )
-                }
               >
                 <button
                   className='transition-all duration-500 hidden md:block'
@@ -107,7 +127,16 @@ const Experience = () => {
                 >
                   <BsArrowDownCircle size={22} />
                 </button>
-                <div className='md:w-[45%] p-3 border border-zinc-300 dark:border-zinc-700 shadow-zinc-300 dark:shadow-zinc-700 shadow-smrounded'>
+                <div
+                  className='md:w-[45%] cursor-pointer  transition-all duration-500 p-3 border border-zinc-300 dark:border-zinc-700 shadow-zinc-300 dark:shadow-zinc-700 shadow-smrounded'
+                  onClick={() =>
+                    setDesc(
+                      desc === experience.description
+                        ? ""
+                        : experience.description
+                    )
+                  }
+                >
                   <div className='flex justify-between gap-2'>
                     <p className='text-xl md:text-2xl font-bold text-amber-600'>
                       {experience.companyName}
