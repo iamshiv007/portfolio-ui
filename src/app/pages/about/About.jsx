@@ -78,9 +78,9 @@ const About = () => {
             </p>
 
             <div className='mt-5 justify-evenly text-justify'>
-              <p className='text-center md:text-left my-1 text-sm'>Objective</p>
+              <p className='text-center md:text-left my-1'>Objective</p>
 
-              <p className='text-sm'>
+              <p className='text-gray-700 dark:text-gray-500'>
                 I didn&apos;t complete my college for some reason, but I&apos;ve
                 learned coding and programming by myself through YouTube and
                 other internet resources. I&apos;m definitely aiming to achieve
