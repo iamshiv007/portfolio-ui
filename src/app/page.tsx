@@ -22,6 +22,9 @@ const Education = dynamic(() => import("./pages/education/Education"), {
 const Experience = dynamic(() => import("./pages/experience/Experience"), {
   loading: () => <Loader height={"100vh"} />,
 });
+const Projects = dynamic(() => import("./pages/projects/Projects"), {
+  loading: () => <Loader height={"100vh"} />,
+});
 
 export default function Home() {
   return (
@@ -41,7 +44,9 @@ export default function Home() {
           {/* Education */}
           <Education />
           {/* Experience */}
-          <Experience/>
+          <Experience />
+          {/* Projects */}
+          <Projects />
         </div>
       </Theme>
     </Fragment>

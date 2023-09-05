@@ -43,7 +43,10 @@ const Experience = () => {
           <MdWork /> Experience
         </h2>
 
-        <div className='pb-[30px] px-[20px] hideExpeBoxes' ref={expeBoxesRef}>
+        <div
+          className='pb-[30px] px-[20px] hideExpeBoxes shadow-sm shadow-zinc-300 dark:shadow-zinc-700'
+          ref={expeBoxesRef}
+        >
           {ExperienceData.map((experience, index) =>
             experience.side === "left" ? (
               <div
