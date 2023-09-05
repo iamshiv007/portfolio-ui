@@ -17,7 +17,10 @@ const TechStack = dynamic(() => import("./pages/techStack/TechStack"), {
   loading: () => <Loader height={"550px"} />,
 });
 const Education = dynamic(() => import("./pages/education/Education"), {
-  loading: () => <Loader height={"550px"} />,
+  loading: () => <Loader height={"100vh"} />,
+});
+const Experience = dynamic(() => import("./pages/experience/Experience"), {
+  loading: () => <Loader height={"100vh"} />,
 });
 
 export default function Home() {
@@ -37,6 +40,8 @@ export default function Home() {
           <TechStack />
           {/* Education */}
           <Education />
+          {/* Experience */}
+          <Experience/>
         </div>
       </Theme>
     </Fragment>
