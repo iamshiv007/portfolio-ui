@@ -46,7 +46,7 @@ const Education = () => {
         </h2>
 
         <div
-          className='hideEdcationBoxes py-[30px] px-[20px] md:px-[100px] lg:px-[200px] flex flex-col gap-[50px]'
+          className='hideEdcationBoxes pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] flex flex-col gap-[20px] md:gap-[50px]'
           ref={educationBoxesRef}
         >
           {EducationData.map((education) => (
@@ -62,11 +62,11 @@ const Education = () => {
                 width={150}
               />
               <div className='flex flex-col gap-2 p-3 md:p-1'>
-                <p className='text-3xl font-bold text-[#159e6e] dark:text-[#17c1ff]'>
+                <p className='text-xl md:text-3xl font-bold text-[#159e6e] dark:text-[#17c1ff]'>
                   {education.name}
                 </p>
                 <p>{education.schoolOrCollege}</p>
-                <p className='text-xl text-blue-700'>
+                <p className='text-base md:text-xl text-blue-700'>
                   {education.fromTo} &nbsp; | &nbsp;{" "}
                   {education.statusOrPrecentage}
                 </p>

@@ -16,11 +16,13 @@ const Experience = () => {
           <MdWork /> Experience
         </h2>
 
-        <div className='py-[30px] px-[20px] '>
-          {ExperienceData.map((experience) =>
+        <div className='pb-[30px] px-[20px] '>
+          {ExperienceData.map((experience, index) =>
             experience.side === "left" ? (
               <div
-                className='md:flex gap-2 items-end mt-7 md:mt-0'
+                className={`md:flex gap-2 items-end ${
+                  index !== 0 ? "mt-7" : ""
+                }`}
                 key={experience.company}
               >
                 <div
@@ -34,7 +36,7 @@ const Experience = () => {
                   }
                 >
                   <div className='flex justify-between'>
-                    <p className='text-2xl font-bold text-amber-600'>
+                    <p className='text-xl md:text-2xl font-bold text-amber-600'>
                       {experience.companyName}
                     </p>
                     <p className='flex gap-2 items-center text-blue-500'>
@@ -105,9 +107,9 @@ const Experience = () => {
                 >
                   <BsArrowDownCircle size={22} />
                 </button>
-                <div className='md:w-[45%] p-3 border border-gray-500 rounded'>
+                <div className='md:w-[45%] p-3 border border-zinc-300 dark:border-zinc-700 shadow-zinc-300 dark:shadow-zinc-700 shadow-smrounded'>
                   <div className='flex justify-between'>
-                    <p className='text-2xl font-bold text-amber-600'>
+                    <p className='text-xl md:text-2xl font-bold text-amber-600'>
                       {experience.companyName}
                     </p>
                     <p className='flex gap-2 items-center text-blue-500'>
