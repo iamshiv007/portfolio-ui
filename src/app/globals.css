@@ -109,3 +109,13 @@
   opacity: 1;
   scale: 1;
 }
+
+/* Education Animation */
+.hideEdcationBoxes > div {
+  opacity: 0;
+  scale: 0;
+}
+.educationBoxes > div {
+  opacity: 1;
+  scale: 1;
+}
