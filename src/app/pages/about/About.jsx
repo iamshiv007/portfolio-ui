@@ -45,7 +45,7 @@ const About = () => {
         id='about'
         ref={aboutRef}
       >
-        <h2 className='text-3xl font-bold text-center p-4 flex justify-center gap-3'>
+        <h2 className='text-3xl font-bold text-center p-4 flex justify-center items-center gap-3'>
           <FaUserCheck /> About me
         </h2>
         <div className='pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] md:flex gap-[50px]'>
