@@ -35,22 +35,22 @@ const Navbar = () => {
   return (
     <Fragment>
       <div
-        className='navbar transition-all duration-500 fixed hidden md:flex gap-4 justify-between w-full p-5 shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 px-8 bg-[#ffffffcc] dark:bg-[#000000cc] backdrop-filter backdrop-blur-lg'
+        className='h-[70px] navbar transition-all duration-500 fixed hidden md:flex gap-4 justify-between items-center w-full shadow-gray-300 dark:shadow-gray-800 shadow-md z-10 px-8 bg-[#ffffffcc] dark:bg-[#000000cc] backdrop-filter backdrop-blur-lg'
         style={{ top: top }}
       >
         <p className='flex text-gray-400'>
           <span className='font-bold text-lg'>SHIV</span> <DiTechcrunch />
         </p>
-        <div className='space-x-4'>
+        <div className='flex h-full gap-4'>
           {NavbarData.map((navbar) => (
             <Link
               className={
-                "font-semibold p-1 text-[#159e6e] dark:text-[#17c1ff] hover:border-b  border-[#159e6e] dark:border-[#17c1ff] border-solid"
+                "font-semibold text-[#159e6e] dark:text-[#17c1ff] hover:border-b-4 hover:scale-110  border-[#159e6e] dark:border-[#17c1ff] border-solid"
               }
               href={navbar.url}
               key={navbar.name}
             >
-              {navbar.name}
+              <div className='flex items-center h-full px-2'>{navbar.name}</div>
             </Link>
           ))}
         </div>
