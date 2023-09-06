@@ -44,10 +44,13 @@ const Projects = () => {
           ref={projectBoxesRef}
         >
           {ProjectsData.map((project) => (
-            <div className='transition-all duration-700' key={project.name}>
+            <div
+              className='transition-all duration-700 w-[330px]'
+              key={project.name}
+            >
               <div
                 className={
-                  "w-[280px] md:w-[330px] shadow-md shadow-zinc-300 dark:shadow-zinc-700 h-48 bg-no-repeat flex flex-col justify-end rounded overflow-hidden bg-cover"
+                  "w-[330px] shadow-md shadow-zinc-300 dark:shadow-zinc-700 h-48 bg-no-repeat flex flex-col justify-end rounded overflow-hidden bg-cover"
                 }
                 onMouseLeave={() => setHeight1("")}
                 onMouseMove={() => setHeight1(project.name)}
