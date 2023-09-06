@@ -31,11 +31,11 @@ const TechStack = () => {
     techStackObserver.observe(techStackRef.current);
 
     if (istechStack) {
-      techBoxesRef.current.classList.add("techBoxes");
-      buttonsRef.current.classList.add("slide-in");
+      techBoxesRef.current.classList.add("pop-up-child");
+      buttonsRef.current.classList.add("pop-up");
     } else {
-      techBoxesRef.current.classList.remove("techBoxes");
-      buttonsRef.current.classList.remove("slide-in");
+      techBoxesRef.current.classList.remove("pop-up-child");
+      buttonsRef.current.classList.remove("pop-up");
     }
   }, [istechStack]);
 
@@ -46,7 +46,7 @@ const TechStack = () => {
     setSectionData(selectedSection ? selectedSection[section] : []);
 
     setTimeout(() => {
-      techBoxesRef.current.classList.add("techBoxes");
+      techBoxesRef.current.classList.add("pop-up-child");
     }, 300);
   }, [section]);
 
@@ -62,7 +62,7 @@ const TechStack = () => {
         </h2>
 
         <div
-          className='translate-x-[200px] opacity-0 transition-all duration-500 w-fit m-auto rounded-lg border border-black dark:border-white border-solid overflow-hidden'
+          className='pop-down transition-all w-fit duration-500 m-auto rounded-lg border border-black dark:border-white border-solid overflow-hidden'
           ref={buttonsRef}
         >
           <button
@@ -72,7 +72,7 @@ const TechStack = () => {
             onClick={(e) => {
               setSection(e.target.innerText);
               if (section !== e.target.innerText)
-                techBoxesRef.current.classList.remove("techBoxes");
+                techBoxesRef.current.classList.remove("pop-up-child");
             }}
           >
             Advance
@@ -84,7 +84,7 @@ const TechStack = () => {
             onClick={(e) => {
               setSection(e.target.innerText);
               if (section !== e.target.innerText)
-                techBoxesRef.current.classList.remove("techBoxes");
+                techBoxesRef.current.classList.remove("pop-up-child");
             }}
           >
             Good
@@ -96,7 +96,7 @@ const TechStack = () => {
             onClick={(e) => {
               setSection(e.target.innerText);
               if (section !== e.target.innerText)
-                techBoxesRef.current.classList.remove("techBoxes");
+                techBoxesRef.current.classList.remove("pop-up-child");
             }}
           >
             Familiar
@@ -104,7 +104,7 @@ const TechStack = () => {
         </div>
 
         <div
-          className='techBoxesRotate flex min-h-[450px] py-[30px] px-[20px] md:px-[100px] flex-wrap justify-center items-center gap-5'
+          className='pop-down-child flex min-h-[450px] py-[30px] px-[20px] md:px-[100px] flex-wrap justify-center items-center gap-5'
           ref={techBoxesRef}
         >
           {sectionData.length !== 0 ? (

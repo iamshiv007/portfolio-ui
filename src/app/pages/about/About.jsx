@@ -50,7 +50,7 @@ const About = () => {
         </h2>
         <div className='pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] md:flex gap-[50px]'>
           <div
-            className='bg-[url(/images/profile2.jpg)] bg-blue-400 w-[200px] h-[350px] bg-cover bg-no-repeat'
+            className='bg-[url(/images/profile2.jpg)] transition-all duration-700 translate-x-[-900px] bg-blue-400 w-[200px] h-[350px] m-auto bg-cover bg-no-repeat'
             ref={profile2Ref}
           />
           <div

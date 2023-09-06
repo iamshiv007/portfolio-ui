@@ -13,26 +13,21 @@ const Experience = () => {
   const expeBoxesRef = useRef();
 
   useEffect(() => {
-    const getScreenWidth = () =>
-      window.innerWidth ||
-      document.documentElement.clientWidth ||
-      document.body.clientWidth;
-
     const expeObserver = new IntersectionObserver(
       ([expeEntry]) => {
         setIsExpe(expeEntry.isIntersecting);
       },
       {
-        rootMargin: `${getScreenWidth() <= 700 ? "-100px" : "-100px"}`,
+        rootMargin: "-100px",
       }
     );
 
     expeObserver.observe(expeRef.current);
 
     if (isExpe) {
-      expeBoxesRef.current.classList.add("expeBoxes");
+      expeBoxesRef.current.classList.add("pop-up-child");
     } else {
-      expeBoxesRef.current.classList.remove("expeBoxes");
+      expeBoxesRef.current.classList.remove("pop-up-child");
     }
   }, [isExpe]);
 
@@ -44,19 +39,19 @@ const Experience = () => {
         </h2>
 
         <div
-          className='pb-[30px] px-[20px] hideExpeBoxes shadow-sm shadow-zinc-300 dark:shadow-zinc-700'
+          className='pop-down-child pb-[30px] px-[20px] shadow-sm shadow-zinc-300 dark:shadow-zinc-700'
           ref={expeBoxesRef}
         >
           {ExperienceData.map((experience, index) =>
             experience.side === "left" ? (
               <div
-                className={`md:flex gap-2 items-end ${
+                className={`md:flex gap-2 items-end transition-all duration-500 ${
                   index !== 0 ? "mt-7" : ""
                 }`}
                 key={experience.company}
               >
                 <div
-                  className='md:w-[45%] transition-all duration-500 cursor-pointer p-3 border border-zinc-300 dark:border-zinc-700 shadow-zinc-300 dark:shadow-zinc-700 shadow-sm rounded'
+                  className='md:w-[45%] cursor-pointer p-3 border border-zinc-300 dark:border-zinc-700 shadow-zinc-300 dark:shadow-zinc-700 shadow-sm rounded'
                   onClick={() =>
                     setDesc(
                       desc === experience.description
@@ -110,11 +105,11 @@ const Experience = () => {
               </div>
             ) : (
               <div
-                className='md:flex justify-end items-end mt-7 gap-2'
+                className='md:flex justify-end items-end mt-7 gap-2 transition-all duration-500 '
                 key={experience.companyName}
               >
                 <button
-                  className='transition-all duration-500 hidden md:block'
+                  className='hidden md:block'
                   onClick={() =>
                     setDesc(
                       desc === experience.description
