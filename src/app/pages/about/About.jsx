@@ -1,9 +1,6 @@
 "use client";
 import React, { Fragment, useState, useRef, useEffect } from "react";
-import Image from "next/image";
 import { FaUserCheck } from "react-icons/fa";
-import { IoLocationSharp } from "react-icons/io5";
-import { BsFillEmojiSmileFill } from "react-icons/bs";
 
 const About = () => {
   const [isAbout, setIsAbout] = useState(false);
