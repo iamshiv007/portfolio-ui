@@ -45,9 +45,11 @@ const Home = () => {
             className='translate-x-[-500px] transition-all duration-700 opacity-0'
             ref={introRef}
           >
-            <p className='py-2 text-4xl font-semibold font-sans'>Hi There !</p>
+            <p className='py-2 text-2xl md:text-4xl font-semibold font-sans'>
+              Hi There !
+            </p>
 
-            <p className='text-4xl py-2 font-semibold font-sans'>
+            <p className='text-2xl md:text-4xl py-2 font-semibold font-sans'>
               I&apos;m a web{" "}
               <span className='text-[#159e6e] dark:text-[#17c1ff]'>
                 {" "}
