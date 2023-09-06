@@ -49,17 +49,10 @@ const About = () => {
           <FaUserCheck /> About me
         </h2>
         <div className='pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] md:flex gap-[50px]'>
-          <div>
-            <Image
-              alt='photo'
-              className='rounded translate-x-[-550px] opacity-0 transition-all duration-700 shadow-sm shadow-gray-400 dark:shadow-gray-700 bg-gray-400 m-auto'
-              height={460}
-              ref={profile2Ref}
-              src='/images/profile2.jpg'
-              width={260}
-            />
-          </div>
-
+          <div
+            className='bg-[url(/images/profile2.jpg)] bg-blue-400 w-[200px] h-[350px] bg-cover bg-no-repeat'
+            ref={profile2Ref}
+          />
           <div
             className='text-lg translate-x-[900px] opacity-0 transition-all duration-700 mt-4 md:mt-0 md:w-[50%] text-center md:text-left'
             ref={aboutInfoRef}

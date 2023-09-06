@@ -56,17 +56,17 @@ const Education = () => {
             >
               <Image
                 alt={education.name}
-                className='hidden md:block bg-blue-600'
+                className='hidden md:block bg-blue-400'
                 height={150}
                 src={education.image}
                 width={150}
               />
               <div className='flex flex-col gap-2 p-3 md:p-1'>
-                <p className='text-xl md:text-3xl font-bold text-[#159e6e] dark:text-[#17c1ff]'>
+                <p className='text-xl md:text-2xl font-bold text-red-600'>
                   {education.name}
                 </p>
                 <p>{education.schoolOrCollege}</p>
-                <p className='text-base md:text-xl text-blue-700'>
+                <p className=' text-blue-600'>
                   {education.fromTo} &nbsp; | &nbsp;{" "}
                   {education.statusOrPrecentage}
                 </p>
