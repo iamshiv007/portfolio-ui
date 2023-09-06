@@ -25,6 +25,12 @@ const Experience = dynamic(() => import("./pages/experience/Experience"), {
 const Projects = dynamic(() => import("./pages/projects/Projects"), {
   loading: () => <Loader height={"100vh"} />,
 });
+const GetInTouch = dynamic(
+  () => import("./components/others/getInTouch/GetInTouch"),
+  {
+    loading: () => <Loader height={"100vh"} />,
+  }
+);
 
 export default function Home() {
   return (
@@ -47,6 +53,8 @@ export default function Home() {
           <Experience />
           {/* Projects */}
           <Projects />
+          {/* Get In Touch */}
+          <GetInTouch />
         </div>
       </Theme>
     </Fragment>

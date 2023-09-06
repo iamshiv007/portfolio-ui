@@ -40,7 +40,7 @@ const Projects = () => {
         </h2>
 
         <div
-          className='pop-down-child pb-[30px] flex flex-wrap px-[20px] gap-4 justify-around shadow-zinc-300 dark:shadow-zinc-700'
+          className='pop-down-child pb-[30px] flex flex-wrap px-[20px] gap-4 justify-around shadow-sm shadow-zinc-300 dark:shadow-zinc-700'
           ref={projectBoxesRef}
         >
           {ProjectsData.map((project) => (

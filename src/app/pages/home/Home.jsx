@@ -67,7 +67,7 @@ const Home = () => {
           </div>
 
           <div
-            className='bg-[url(/images/profile3.png)] translate-x-[500px] transition-all opacity-0 duration-700 w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-cover m-auto md:m-0 mt-[40px] md:mt-0'
+            className='bg-[url(/images/profile3.png)] translate-x-[500px] transition-all opacity-0 duration-700 w-[180px] h-[300px] md:w-[240px] md:h-[400px] bg-cover m-auto md:m-0 mt-[40px] md:mt-0 bg-no-repeat'
             ref={profileRef}
           />
         </div>
