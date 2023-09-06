@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { CgWebsite } from "react-icons/cg";
 import { HiExternalLink } from "react-icons/hi";
@@ -9,20 +9,45 @@ import { ProjectsData } from "../../portfolioData/projects/ProjectsData";
 
 const Projects = () => {
   const [height1, setHeight1] = useState("");
+  const [isProjects, setIsProjects] = useState(false);
+  const projectsRef = useRef();
+  const projectBoxesRef = useRef();
+
+  useEffect(() => {
+    const projectsObserver = new IntersectionObserver(
+      ([projectsEntry]) => {
+        setIsProjects(projectsEntry.isIntersecting);
+      },
+      {
+        rootMargin: "-100px",
+      }
+    );
+
+    projectsObserver.observe(projectsRef.current);
+
+    if (isProjects) {
+      projectBoxesRef.current.classList.add("pop-up-child");
+    } else {
+      projectBoxesRef.current.classList.remove("pop-up-child");
+    }
+  }, [isProjects]);
 
   return (
     <Fragment>
-      <section id='projects'>
+      <section id='projects' ref={projectsRef}>
         <h2 className='text-3xl font-bold text-center p-4 flex justify-center items-center gap-3'>
           <CgWebsite /> Projects
         </h2>
 
-        <div className='pb-[30px] flex flex-wrap px-[20px] gap-4 justify-around shadow-zinc-300 dark:shadow-zinc-700'>
+        <div
+          className='pop-down-child pb-[30px] flex flex-wrap px-[20px] gap-4 justify-around shadow-zinc-300 dark:shadow-zinc-700'
+          ref={projectBoxesRef}
+        >
           {ProjectsData.map((project) => (
-            <div key={project.name}>
+            <div className='transition-all duration-700' key={project.name}>
               <div
                 className={
-                  "w-[330px] shadow-md shadow-zinc-300 dark:shadow-zinc-700 h-48 bg-no-repeat flex flex-col justify-end rounded overflow-hidden bg-cover"
+                  "w-[280px] md:w-[330px] shadow-md shadow-zinc-300 dark:shadow-zinc-700 h-48 bg-no-repeat flex flex-col justify-end rounded overflow-hidden bg-cover"
                 }
                 onMouseLeave={() => setHeight1("")}
                 onMouseMove={() => setHeight1(project.name)}
