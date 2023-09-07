@@ -31,6 +31,7 @@ const GetInTouch = dynamic(
     loading: () => <Loader height={"100vh"} />,
   }
 );
+const Footer = dynamic(() => import("./components/layout/footer/Footer"));
 
 export default function Home() {
   return (
@@ -55,6 +56,8 @@ export default function Home() {
           <Projects />
           {/* Get In Touch */}
           <GetInTouch />
+          {/* Footer */}
+          <Footer />
         </div>
       </Theme>
     </Fragment>
