@@ -4,8 +4,9 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <Fragment>
-      <div className='flex flex-col md:flex-row gap-3 justify-between px-[20px] py-[30px] items-start md:items-center'>
+      <div className='px-[20px] py-[30px] flex flex-col md:flex-row justify-between items-start md:items-center gap-3'>
         <div className='flex flex-col'>
+          {/* Github repository */}
           <Link
             className='hover:underline'
             href='https://github.com/iamshiv007/portfolio-ui'
@@ -27,6 +28,7 @@ const Footer = () => {
         </div>
 
         <div className='flex flex-col'>
+          {/* NextJS official */}
           <Link
             className='hover:underline'
             href='https://nextjs.org/docs'
@@ -34,6 +36,7 @@ const Footer = () => {
           >
             NextJS
           </Link>
+          {/* TailwindCSS official */}
           <Link
             className='hover:underline'
             href='https://tailwindcss.com'
