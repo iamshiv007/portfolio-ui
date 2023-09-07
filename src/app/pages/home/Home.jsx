@@ -60,7 +60,9 @@ const Home = () => {
             <div className='mt-5 md:mt-10 flex gap-3'>
               <Link
                 className='text-white text-xl font-semibold rounded bg-red-400 hover:bg-red-500 px-2 py-1'
-                href='mailto:softdev.shivraj@gmail.com'
+                href='mailto:softdev.shivraj@gmail.com?subject=Be our team member'
+                rel='noopener noreferrer'
+                target='_blank'
               >
                 Hire me
               </Link>
