@@ -47,30 +47,37 @@ const About = () => {
         </h2>
         <div className='pb-[30px] px-[20px] md:px-[100px] lg:px-[200px] md:flex gap-[50px]'>
           <div
-            className='bg-[url(/images/profile2.jpg)] transition-all duration-700 translate-x-[-900px] bg-blue-400 w-[200px] h-[350px] m-auto bg-cover bg-no-repeat'
+            className='bg-[url(/images/profile2.jpg)] shadow-zinc-300 dark:shadow-zinc-700 shadow-sm transition-all duration-700 translate-x-[-900px] bg-blue-400 w-[200px] h-[350px] m-auto bg-cover bg-no-repeat'
             ref={profile2Ref}
           />
           <div
-            className='text-lg translate-x-[900px] opacity-0 transition-all duration-700 mt-4 md:mt-0 md:w-[50%] text-center md:text-left'
+            className='text-lg p-2 translate-x-[900px] opacity-0 transition-all duration-700 mt-4 md:mt-0 md:w-[50%] text-center md:text-left rounded'
             ref={aboutInfoRef}
           >
-            <p className='text-3xl text-center md:text-left text-blue-700'>
+            <p className='text-3xl text-center md:text-left font-semibold text-[#159e6e] dark:text-[#17c1ff]'>
               Shivraj Gurjar.
             </p>
-            <p className='text-center md:text-left text-blue-600 mt-1'>
+            <p className='text-center md:text-left text-red-600 mt-1'>
               Full Stack Developer
             </p>
-            <p className='mt-2 text-center md:text-left text-gray-700 dark:text-gray-500'>
-              Location : Kota, Rajasthan, India 🇮🇳
-            </p>
-            <p className='text-center md:text-left text-gray-700 dark:text-gray-500'>
-              Age : 20 Years
-            </p>
+            <div>
+              {" "}
+              <p className='mt-2 text-center md:text-left text-blue-600'>
+                Location : Kota, Rajasthan, India 🇮🇳
+              </p>
+              <p className='text-center md:text-left text-blue-600'>
+                Age : 20 Years
+              </p>
+              <p className='text-center md:text-left text-blue-600'>
+                Experience : 6 Months
+              </p>
+              <p className='text-center md:text-left text-blue-600'>
+                Projects : 3
+              </p>
+            </div>
 
             <div className='mt-5 justify-evenly text-justify'>
-              <p className='text-center md:text-left my-1'>Objective</p>
-
-              <p className='text-gray-700 dark:text-gray-500'>
+              <p className='text-gray-600 dark:text-gray-300'>
                 I didn&apos;t complete my college for some reason, but I&apos;ve
                 learned coding and programming by myself through YouTube and
                 other internet resources. I&apos;m definitely aiming to achieve
