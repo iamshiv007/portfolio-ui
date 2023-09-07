@@ -1,5 +1,6 @@
 "use client";
 import React, { Fragment, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 const Home = () => {
   const [isHome, setIsHome] = useState(false);
@@ -57,12 +58,19 @@ const Home = () => {
               </span>
             </p>
             <div className='mt-5 md:mt-10 flex gap-3'>
-              <button className='text-white text-xl font-semibold rounded bg-red-400 hover:bg-red-500 px-2 py-1'>
+              <Link
+                className='text-white text-xl font-semibold rounded bg-red-400 hover:bg-red-500 px-2 py-1'
+                href='mailto:softdev.shivraj@gmail.com'
+              >
                 Hire me
-              </button>
-              <button className='text-xl font-semibold rounded border border-red-500 hover:text-white hover:bg-red-500 px-2 py-1'>
+              </Link>
+              <Link
+                className='text-xl font-semibold rounded border border-red-500 hover:text-white hover:bg-red-500 px-2 py-1'
+                href='https://drive.google.com/file/d/1AWiU8oWJi5rY0nl6d3iMHOjevBq7izOU/view?usp=drive_link'
+                target='_blank'
+              >
                 Download CV
-              </button>
+              </Link>
             </div>
           </div>
 
