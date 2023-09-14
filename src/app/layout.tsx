@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Instrument_Sans({ subsets: ["latin"] });
 
@@ -19,7 +20,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <ThemeContextProvider>{children}</ThemeContextProvider>
+        <ThemeContextProvider>
+          {children}
+          <Analytics />
+        </ThemeContextProvider>
       </body>
     </html>
   );
