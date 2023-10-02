@@ -48,7 +48,7 @@ const Experience = () => {
                 className={`md:flex gap-2 items-end transition-all duration-500 ${
                   index !== 0 ? "mt-7" : ""
                 }`}
-                key={experience.company}
+                key={experience.companyName}
               >
                 <div
                   className='md:w-[45%] cursor-pointer p-3 border border-zinc-300 dark:border-zinc-700 shadow-zinc-300 dark:shadow-zinc-700 shadow-sm rounded'

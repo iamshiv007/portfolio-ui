@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 
 import Theme from "./components/others/theme/Theme";
 import Loader from "./components/layout/loader/Loader";
+import ShoveeModal from "./components/others/modal/ShoveeModal";
 const Navbar = dynamic(() => import("./components/layout/navbar/Navbar"));
 const MyHome = dynamic(() => import("./pages/home/Home"), {
   loading: () => <Loader height={"100vh"} />,
@@ -58,6 +59,8 @@ export default function Home() {
           <GetInTouch />
           {/* Footer */}
           <Footer />
+          {/* ShoveeModal */}
+          <ShoveeModal />
         </div>
       </Theme>
     </Fragment>
