@@ -1,10 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const ShoveeModal = () => {
-  const [showModal, setShowModal] = useState<boolean>(true);
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowModal(true);
+    }, 25000);
+  }, []);
 
   return (
     <div
